@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-$Server = "localhost";
+$Server = "127.0.0.1";
 $Username = "root";
 $Password = "root";
 $DB = "MyClients";
