@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 04, 2019 at 12:10 PM
+-- Generation Time: Apr 06, 2019 at 04:24 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -31,6 +31,26 @@ CREATE TABLE `Clients` (
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`ID`, `Name`, `Email`, `Password`) VALUES
+(1, 'MuhaddiMu', 'Ask@Muhaddis.Info', '$2y$10$CEcxiqO2Toxo8N9REIDrMep/JsJs5qq8.PKtSHFAFrGpOj1nprNum');
+
 --
 -- Indexes for dumped tables
 --
@@ -42,6 +62,12 @@ ALTER TABLE `Clients`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -49,4 +75,10 @@ ALTER TABLE `Clients`
 -- AUTO_INCREMENT for table `Clients`
 --
 ALTER TABLE `Clients`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
